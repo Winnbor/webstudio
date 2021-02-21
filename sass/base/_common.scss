@@ -1,0 +1,107 @@
+body {
+  background-color: $bg-c-main;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: $txt-c-main;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+a {
+  text-decoration: none;
+  color: $txt-c-main;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.section-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: $txt-c-secondary;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.container {
+  max-width: 480px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+.our-works-section,
+.team-container,
+.clients-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 95px;
+    padding-bottom: 95px;
+  }
+}
+
+.header-container,
+.header-links-wrapper,
+.navigation,
+.nav-menu,
+.contact-links,
+.main-banner-bg,
+.features-list,
+.doings-list,
+.team-list,
+.team-list img,
+.filter-selectors,
+.projects-cards,
+.projects-cards img,
+.footer-liner,
+.doings-text,
+.modal-close-btn,
+.overlay,
+.footer-form,
+.send-btn,
+.modal-form {
+  display: flex;
+}
+.nav-menu a:hover,
+.nav-menu a:active,
+.nav-menu a:focus,
+.footer-contacts a:hover,
+.footer-contacts a:active,
+.footer-contacts a:focus {
+  color: $txt-c-accent;
+}
+.contact-links a:hover,
+.contact-links a:active,
+.contact-links a:focus {
+  @media screen and (min-width: 768px) {
+    color: $txt-c-accent;
+  }
+}
+
+/* class for hiding */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

@@ -1,0 +1,187 @@
+// footer send form
+.footer-form {
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  justify-content: space-between;
+
+  input {
+    width: 100%;
+    max-width: 450px;
+    height: 51px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: transparent;
+    color: $txt-c-light;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.send-btn {
+  fill: $txt-c-light;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+}
+
+.send-icon {
+  margin-left: 10px;
+}
+
+// modal form
+.modal-form {
+  flex-direction: column;
+  align-items: center;
+
+  label {
+    width: 100%;
+  }
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 28px;
+
+  input {
+    padding-left: 42px;
+  }
+}
+.form-icon {
+  position: absolute;
+  left: 15px;
+  bottom: 50%;
+  transform: translateY(50%);
+  fill: $txt-c-secondary;
+  transition: fill $trans-duration $trans-cubic;
+}
+.comment-box {
+  margin-bottom: 20px;
+  position: relative;
+}
+.policy-box {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  display: block;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  letter-spacing: 0.01em;
+  color: $txt-c-main;
+  transition: border $trans-duration $trans-cubic;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &.textarea {
+    height: auto;
+    padding: 12px 16px;
+    resize: none;
+  }
+
+  &:hover,
+  &:focus-within {
+    border: 1px solid $bg-c-accent;
+  }
+
+  &:hover + .form-icon,
+  &:focus-within + .form-icon {
+    fill: $txt-c-accent;
+  }
+}
+
+.check-box {
+  padding-left: 24px;
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    box-shadow: inset 0 0 0 2px $txt-c-secondary;
+    border-radius: 2px;
+    transition: box-shadow 250ms $trans-cubic,
+      background-color 250ms $trans-cubic;
+
+    @media screen and (min-width: 1200px) {
+      left: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+
+    &::before {
+      bottom: 0px;
+    }
+  }
+}
+
+.policy-input {
+  &:checked + .check-box::before {
+    background-color: $bg-c-accent;
+    box-shadow: inset 0 0 0 2px $txt-c-accent;
+    background-image: url(../images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &:focus + .check-box::before {
+    box-shadow: inset 0 0 0 2px $txt-c-secondary, 0 0 0 2px $txt-c-accent;
+  }
+
+  &:checked:focus + .check-box::before {
+    box-shadow: inset 0 0 0 2px $txt-c-accent, 0 0 0 2px $txt-c-accent;
+  }
+}
+
+.policy-link {
+  color: $txt-c-accent;
+  text-decoration: underline;
+
+  &:focus {
+    outline-color: $txt-c-accent;
+  }
+}
+
+.modal-form-label {
+  position: absolute;
+  top: -15px;
+  display: block;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.modal-form-btn {
+  padding: 10px 55px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color $trans-duration $trans-cubic;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}

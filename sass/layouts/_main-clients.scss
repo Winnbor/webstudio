@@ -1,0 +1,39 @@
+.clients-list {
+  @extend %unmarked-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+
+  li {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 6 * 15px) / 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 12 * 15px) / 6);
+    }
+  }
+}
+
+.client-card {
+  width: 100%;
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $icon-c-primary;
+  border-radius: 4px;
+  fill: $icon-c-primary;
+  transition: fill $trans-duration $trans-cubic,
+    border $trans-duration $trans-cubic;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $bg-c-accent;
+    fill: $bg-c-accent;
+  }
+}

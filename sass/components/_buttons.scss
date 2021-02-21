@@ -1,0 +1,74 @@
+.main-style-btn {
+  background-color: $bg-c-accent;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $txt-c-light;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+// filter buttons
+.filter-selector {
+  background-color: $bg-c-secondary;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $txt-c-secondary;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: color $trans-duration $trans-cubic,
+    background-color $trans-duration $trans-cubic,
+    box-shadow $trans-duration $trans-cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-c-accent;
+    color: $txt-c-light;
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// burger button
+.burger-menu-btn {
+  position: relative;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  fill: $txt-c-secondary;
+  transition: fill $trans-duration $trans-cubic;
+
+  &:hover,
+  &:focus {
+    fill: $txt-c-accent;
+  }
+
+  .cross-icon {
+    display: none;
+  }
+
+  &.is-open {
+    .cross-icon {
+      display: block;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}

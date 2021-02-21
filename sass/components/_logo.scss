@@ -1,0 +1,16 @@
+.logo {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #000000;
+
+  span {
+    color: $txt-c-accent;
+  }
+  &-footer {
+    color: $txt-c-light;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,33 @@
+.our-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* filter */
+.filter-selectors {
+  @extend %unmarked-list;
+
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+
+  li {
+    @media screen and (max-width: 767px) {
+      &:nth-child(-n + 3) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}

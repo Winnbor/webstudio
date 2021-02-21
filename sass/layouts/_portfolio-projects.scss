@@ -1,0 +1,92 @@
+.projects-cards {
+  @extend %unmarked-list;
+
+  flex-wrap: wrap;
+
+  li {
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 6 * 15px) / 3);
+    }
+  }
+  a {
+    display: block;
+    transition: box-shadow $trans-duration $trans-cubic;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: -15px;
+  }
+}
+
+.project-card-info {
+  border-left: 1px solid $bg-c-card-border;
+  border-right: 1px solid $bg-c-card-border;
+  border-bottom: 1px solid $bg-c-card-border;
+  padding: 20px 0 20px 24px;
+}
+.project-card-heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $txt-c-secondary;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.project-card-text {
+  font-size: 16px;
+  line-height: 1.87;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.overlay-container {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: $txt-c-light;
+  background-color: $bg-c-accent-transp;
+  transition: transform $trans-duration $trans-cubic;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .projects-cards a:hover &,
+  .projects-cards a:focus & {
+    transform: translateY(-100%);
+  }
+
+  @media screen and (max-width: 374px) {
+    font-size: 16px;
+  }
+}

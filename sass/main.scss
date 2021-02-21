@@ -1,0 +1,22 @@
+@import './utils/variables';
+@import './utils/placeholders';
+
+@import './base/common';
+
+@import './components/logo';
+@import './components/nav-menu';
+@import './components/buttons';
+@import './components/contact-links';
+@import './components/social-links';
+@import './components/modal';
+@import './components/forms';
+
+@import './layouts/header';
+@import './layouts/main-banner';
+@import './layouts/main-features';
+@import './layouts/main-doings';
+@import './layouts/main-team';
+@import './layouts/main-clients';
+@import './layouts/footer';
+@import './layouts/portfolio-filter';
+@import './layouts/portfolio-projects';
