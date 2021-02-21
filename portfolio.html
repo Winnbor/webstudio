@@ -16,13 +16,16 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- HEADER -->
     <header class="header header-border">
       <div class="header-container container">
-        <a href="./index.html" class="logo"><span>Web</span>Studio</a>
+        <a href="./index.html" class="logo" data-aos="zoom-in"
+          ><span>Web</span>Studio</a
+        >
 
         <div class="header-links-wrapper" data-menu>
           <nav class="navigation">
@@ -92,19 +95,19 @@
 
           <!-- filter -->
           <ul class="filter-selectors">
-            <li>
+            <li data-aos="flip-down" data-aos-delay="100">
               <button type="button" class="filter-selector">Все</button>
             </li>
-            <li>
+            <li data-aos="flip-down" data-aos-delay="200">
               <button type="button" class="filter-selector">Веб-сайты</button>
             </li>
-            <li>
+            <li data-aos="flip-down" data-aos-delay="300">
               <button type="button" class="filter-selector">Приложения</button>
             </li>
-            <li>
+            <li data-aos="flip-down" data-aos-delay="400">
               <button type="button" class="filter-selector">Дизайн</button>
             </li>
-            <li>
+            <li data-aos="flip-down" data-aos-delay="500">
               <button type="button" class="filter-selector">Маркетинг</button>
             </li>
           </ul>
@@ -493,28 +496,28 @@
             <p class="footer-cta">присоединяйтесь</p>
           </div>
           <ul class="footer-social-icons">
-            <li>
+            <li data-aos="zoom-out-right">
               <a href="#" class="social-icon-ellipse footer-ellipse">
                 <svg class="teammate-icon">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li data-aos="zoom-out-up">
               <a href="#" class="social-icon-ellipse footer-ellipse">
                 <svg class="teammate-icon">
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li data-aos="zoom-out-up">
               <a href="#" class="social-icon-ellipse footer-ellipse">
                 <svg class="teammate-icon">
                   <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li data-aos="zoom-out-left">
               <a href="#" class="social-icon-ellipse footer-ellipse">
                 <svg class="teammate-icon">
                   <use href="./images/sprite.svg#icon-linkedin"></use>
@@ -541,5 +544,7 @@
     </footer>
 
     <script src="./js/menu.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animation-on-scroll.js"></script>
   </body>
 </html>

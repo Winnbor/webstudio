@@ -21,7 +21,8 @@
         "../sass/layouts/_main-clients.scss",
         "../sass/layouts/_footer.scss",
         "../sass/layouts/_portfolio-filter.scss",
-        "../sass/layouts/_portfolio-projects.scss"
+        "../sass/layouts/_portfolio-projects.scss",
+        "../sass/_animations.scss"
     ],
     "names": [],
     "file": "main.min.css"
