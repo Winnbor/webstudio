@@ -5,11 +5,31 @@ const refs = {
   modal: document.querySelector('[data-modal]'),
 };
 
-refs.openModalBtn.addEventListener('click', onToggleModal);
-refs.closeModalBtn.addEventListener('click', onToggleModal);
+refs.openModalBtn.addEventListener('click', onOpenModal);
+refs.closeModalBtn.addEventListener('click', onCloseModal);
+refs.backdrop.addEventListener('click', onBackdropClick);
 
-function onToggleModal() {
-  document.body.classList.toggle('modal-open');
-  document.body.classList.toggle('show-modal');
-  refs.modal.classList.toggle('is-visible');
+function onOpenModal() {
+  window.addEventListener('keydown', onEscKeyPress);
+  document.body.classList.add('modal-open', 'show-modal');
+  refs.modal.classList.add('is-visible');
+}
+
+function onCloseModal() {
+  document.body.classList.remove('modal-open', 'show-modal');
+  refs.modal.classList.remove('is-visible');
+}
+
+function onBackdropClick(event) {
+  if (event.currentTarget === event.target) {
+    onCloseModal();
+  }
+}
+
+function onEscKeyPress(event) {
+  const ESC_KEY_CODE = 'Escape';
+
+  if (event.code === ESC_KEY_CODE) {
+    onCloseModal();
+  }
 }
