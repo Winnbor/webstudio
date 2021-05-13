@@ -1,3 +1,8 @@
+body.show-modal .backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
 .backdrop {
   position: fixed;
   z-index: 5;
@@ -9,12 +14,13 @@
   justify-content: center;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transition: opacity $trans-duration $trans-cubic;
 }
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+
 .modal-form-container {
   position: relative;
   width: calc(100% - 2 * 15px);
@@ -27,7 +33,15 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+
+  opacity: 0;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+
+  &.is-visible {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
 
   @media screen and (max-width: 359px) {
     align-items: flex-start;
@@ -50,11 +64,6 @@
     @media screen and (max-width: 1199px) {
       text-align: center;
     }
-  }
-
-  .is-hidden & {
-    transform: translateY(-10%);
-    opacity: 0%;
   }
 }
 

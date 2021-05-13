@@ -32,7 +32,7 @@
             <ul class="nav-menu">
               <li><a href="#" class="current">Студия</a></li>
               <li><a href="./portfolio.html">Портфолио</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#contacts">Контакты</a></li>
             </ul>
           </nav>
           <div class="contacts-mobile-wrapper">
@@ -608,7 +608,7 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container container">
-        <div class="footer-info">
+        <div class="footer-info" id="contacts">
           <div class="footer-liner">
             <a href="./index.html" class="logo logo-footer"
               ><span>Web</span>Studio</a
@@ -677,8 +677,8 @@
     </footer>
 
     <!-- MODALS -->
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal-form-container">
+    <div class="backdrop" data-backdrop>
+      <div class="modal-form-container" data-modal>
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg width="12" height="12">
             <use href="./images/sprite.svg#icon-close"></use>

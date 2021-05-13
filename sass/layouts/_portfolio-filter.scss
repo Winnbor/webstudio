@@ -1,3 +1,8 @@
+.our-works-section {
+  @media screen and (max-width: 767px) {
+    padding-top: 50px;
+  }
+}
 .our-works {
   display: flex;
   flex-direction: column;
