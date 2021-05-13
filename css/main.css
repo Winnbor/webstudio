@@ -81,7 +81,7 @@ img {
 
 @media screen and (max-width: 1199px) {
   .container {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 

@@ -42,7 +42,7 @@ img {
   margin-right: auto;
 
   @media screen and (max-width: 1199px) {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   @media screen and (min-width: 768px) {
